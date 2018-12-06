@@ -1,0 +1,6 @@
+name: LevelItem
+version: @version@
+main: me.cilio.lvlitem.LevelItem
+prefix: LevelItem
+authors: [Cilio, Himmelt]
+description: LevelItem Plugin
