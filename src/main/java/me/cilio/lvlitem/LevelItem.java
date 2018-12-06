@@ -107,7 +107,7 @@ public final class LevelItem extends JavaPlugin implements Listener {
         }
     }
 
-    private boolean cantUseStack(int level, ItemStack stack) {
+    public boolean cantUseStack(int level, ItemStack stack) {
         int needLevel = 0;
         ItemMeta meta = stack.getItemMeta();
         if (meta != null) {
@@ -122,8 +122,12 @@ public final class LevelItem extends JavaPlugin implements Listener {
         }
         return level < needLevel;
     }
+    
+    public boolean canUseStack(int level, ItemStack stack) {
+        return !cantUseStack(level, stack);
+    }
 
-    private int parseLevel(String line) {
+    public int parseLevel(String line) {
         int lvl = -1;
         Matcher matcher = LEVEL.matcher(line);
         if (matcher.find()) {
