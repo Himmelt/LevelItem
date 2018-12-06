@@ -1,5 +1,5 @@
 name: LevelItem
-version: @version@
+version: 1.0.1
 main: me.cilio.lvlitem.LevelItem
 prefix: LevelItem
 authors: [Cilio, Himmelt]
